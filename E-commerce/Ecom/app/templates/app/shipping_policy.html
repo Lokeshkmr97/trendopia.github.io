@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Address{% endblock title %}
+{% block main-content %}
+<div class="container shadow">
+    <div class="row text-center mt-5">
+        <h1 style="font-family: Harmonia Sans, sans-serif;">Shipping Policy</h1>
+    </div>
+    <div class="row mt-3 px-4">
+        <div class="col-sm-6 offset-sm-3">
+        <p><strong>Shipping Rates:</strong></p>
+    <p>70/- flat shipping charge on orders below or equal to 700/-</p>
+    <p>Free Shipping on order above 700/-</p>
+    <p>&nbsp;</p>
+    <p><strong>Order Processing:</strong></p>
+    <p>We strive to fulfill orders as soon as you place them. In most cases, your order will be sent to our delivery partner within<span>&nbsp;</span><span>1-2 business days</span>. Our business days are Monday-Friday.</p>
+    <p>&nbsp;</p>
+    <p><strong>Shipping Time:</strong></p>
+    <p>For most serviceable pin codes, we try to deliver<span>&nbsp;</span><span>within 7 days</span>. But due to unforeseen circumstances like weather, strikes, remote locations, stocking issues, or any other reason - it may take longer. You will however be able to track your package using a unique tracking link that we will email/SMS you after your order is sent to our delivery partner.</p>
+    <p>&nbsp;</p>
+    <p><strong>Problem with your delivery?</strong></p>
+    <p>In case of any problem or changes to your delivery please<span>&nbsp;</span><a href="{% url 'contact' %}" title="contact us">contact us</a>&nbsp;, our support team will resolve your query within 24 hours Guaranteed!</p>
+        </div>
+    </div>
+</div>
+
+{% endblock main-content %}

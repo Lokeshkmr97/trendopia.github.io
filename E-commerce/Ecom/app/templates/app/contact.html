@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+{% block title %}
+Contact
+{% endblock title %}
+
+{% block main-content %}
+
+<div class="container mt-4">
+    <div class="row">
+      
+        <div class="col-sm-5 mt-2 offset-sm-2">
+            <p style="font-weight:bold;font-size:20px;">Contact Details</p>
+            <p>Address : LIG-289, Sonagiri, Piplani-462022 Bhopal</p>
+            <p>Mobile No. : 8540991066</p>
+            <p>Email ID : trendopiasupport@gmail.com</p>
+        </div>
+        <div class="col-sm-5 mt-2 shadowt">
+            <form action="" method="POST" class="">
+                {% csrf_token %}
+                {% comment %} {% for fm in form %}
+                    {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+                {% endfor %} {% endcomment %}
+                {{form.as_p}}
+                <div class="text-center">
+                    <input type="submit" value="Submit" class="btn btn-success">
+                </div>
+                {% if messages %}
+                {% for message in messages %}
+                <p {% if message.tags %} class="alert alert-{{message.tags}} mb-5" {% endif %}>{{message}}</p>
+                {% endfor %}
+                {% endif %}
+                
+            </form>
+            
+        </div>
+    </div>
+</div>
+{% endblock main-content %}
